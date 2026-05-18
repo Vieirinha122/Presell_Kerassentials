@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Kerassentials™ Official Website | Healthy Nails Support</title>
+  <meta name="description"
+    content="Kerassentials™ Official Website. Premium natural formula designed to support healthy-looking nails and skin. Limited-time discount available today." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #fdfdfd;
+      color: #1e293b;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* TOP BAR */
+    .top-bar {
+      width: 100%;
+      background: linear-gradient(135deg, #dc2626, #991b1b);
+      color: #fff;
+      text-align: center;
+      padding: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      position: sticky;
+      top: 0;
+      z-index: 99999;
+    }
+
+    /* SEÇÃO 1: HERO */
+    .hero-section {
+      width: 100%;
+      padding: 70px 20px;
+      background: #ffffff;
+    }
+
+    .hero-container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+    }
+
+    .hero-image-side {
+      flex: 1.1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .product-box-hero {
+      width: 100%;
+      max-width: 460px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(15, 76, 58, 0.12);
+      transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .product-box-hero:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 30px 50px rgba(15, 76, 58, 0.2);
+    }
+
+    .hero-info-side {
+      flex: 1;
+      text-align: left;
+    }
+
+    .hero-brand-title {
+      font-size: 46px;
+      font-weight: 900;
+      color: #0f4c3a;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+
+    .stars-rating {
+      font-size: 16px;
+      color: #fbbf24;
+      margin-bottom: 22px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-text-desc {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #475569;
+      margin-bottom: 35px;
+    }
+
+    /* BOTÃO PREMIUM APERFEIÇOADO */
+    .btn-offer {
+      display: inline-block;
+      background: linear-gradient(135deg, #ffcc00 0%, #ffa600 100%);
+      color: #0f4c3a;
+      font-size: 21px;
+      font-weight: 900;
+      padding: 18px 50px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      box-shadow: 0 6px 25px rgba(255, 166, 0, 0.45);
+      border-bottom: 4px solid #d98d00;
+      transition: all 0.2s ease;
+      text-align: center;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-offer:hover {
+      background: linear-gradient(135deg, #ffd633 0%, #ffb300 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 30px rgba(255, 166, 0, 0.6);
+    }
+
+    .btn-offer:active {
+      transform: translateY(2px);
+      border-bottom-width: 1px;
+    }
+
+    .promo-subtext {
+      font-size: 14px;
+      color: #475569;
+      font-weight: 700;
+      margin-top: 14px;
+      letter-spacing: 0.2px;
+    }
+
+    /* SEÇÃO 2: BENEFÍCIOS */
+    .benefits-section {
+      width: 100%;
+      background: #f4f8f7;
+      padding: 80px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 900;
+      color: #0f4c3a;
+      margin-bottom: 55px;
+      letter-spacing: -0.5px;
+    }
+
+    .benefits-grid {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto 50px auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1.4fr 1.2fr;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .benefits-col {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .product-center-box {
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(15, 76, 58, 0.15);
+      border: 1px solid rgba(15, 76, 58, 0.05);
+      background: #fff;
+    }
+
+    .product-center-box img {
+      width: 100%;
+      display: block;
+    }
+
+    /* CARDS DE BENEFÍCIOS REFINADOS */
+    .benefit-card {
+      background: #ffffff;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+      border-left: 5px solid #10b981;
+      transition: transform 0.2s ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateX(4px);
+    }
+
+    .benefit-card h3 {
+      font-size: 19px;
+      font-weight: 700;
+      color: #0f4c3a;
+      margin-bottom: 10px;
+    }
+
+    .benefit-card p {
+      font-size: 15px;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .center-action {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    /* FOOTER (Otimizado) */
+    footer {
+      background: #091e19;
+      color: #94a3b8;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 12px;
+      border-top: 2px solid #133a2f;
+    }
+
+    .footer-links {
+      margin-bottom: 25px;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      margin: 0 12px;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      color: #10b981;
+    }
+
+    .footer-text {
+      max-width: 960px;
+      margin: auto;
+      line-height: 1.8;
+      color: #64877e;
+      text-align: justify;
+    }
+
+    /* POPUP ANTI-FUGA */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(9, 30, 25, 0.85);
+      z-index: 999999;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      backdrop-filter: blur(5px);
+    }
+
+    .popup-box {
+      background: white;
+      width: 100%;
+      max-width: 440px;
+      border-radius: 20px;
+      padding: 45px 35px;
+      text-align: center;
+      position: relative;
+      border: 4px solid #0f4c3a;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 14px;
+      right: 20px;
+      font-size: 28px;
+      cursor: pointer;
+      color: #94a3b8;
+    }
+
+    .popup-title {
+      font-size: 36px;
+      font-weight: 900;
+      color: #dc2626;
+      margin-bottom: 14px;
+      letter-spacing: -0.5px;
+    }
+
+    .popup-text {
+      color: #475569;
+      line-height: 1.6;
+      margin-bottom: 28px;
+      font-size: 16px;
+    }
+
+    .popup-btn {
+      display: block;
+      background: #10b981;
+      color: white;
+      padding: 18px;
+      border-radius: 10px;
+      font-size: 19px;
+      font-weight: 900;
+      text-transform: uppercase;
+      box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+    }
+
+    /* RESPONSIVIDADE ADAPTATIVA */
+    @media(max-width: 992px) {
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+      }
+
+      .hero-info-side {
+        text-align: center;
+      }
+
+      .hero-brand-title {
+        font-size: 38px;
+      }
+
+      .stars-rating {
+        justify-content: center;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        gap: 25px;
+      }
+
+      .product-center-box {
+        grid-row: 1;
+        max-width: 360px;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+      }
+    }
+
+    @media(max-width: 480px) {
+      .hero-section {
+        padding: 45px 15px;
+      }
+
+      .product-box-hero {
+        max-width: 320px;
+      }
+
+      .hero-brand-title {
+        font-size: 32px;
+      }
+
+      .btn-offer {
+        width: 100%;
+        padding: 18px 15px;
+        font-size: 19px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    LIMITED TIME OFFER — SAVE UP TO 75% TODAY
+  </div>
+
+  <section class="hero-section">
+    <div class="hero-container">
+
+      <div class="hero-image-side">
+        <a href="https://www.checkout-ds24.com/redir/533765/arthurv720fa34/" class="product-box-hero">
+          <img src="https://images.sympla.com.br/63dde98fe5e80-xs.jpg" alt="Kerassentials Official Product">
+        </a>
+      </div>
+
+      <div class="hero-info-side">
+        <h1 class="hero-brand-title">
+          The Nail Support Breakthrough Everyone Is Talking About
+        </h1>
+
+        <div class="stars-rating">
+          <span>★★★★★</span> Rated 4.8/5 By Thousands
+        </div>
+
+        <p class="hero-text-desc">
+          Discover how Kerassentials™ is helping men and women support healthy nail comfort, thickness, and absolute
+          confidence using a professional, doctor-formulated natural liquid blend.
+        </p>
+
+        <a href="https://www.checkout-ds24.com/redir/533765/arthurv720fa34/" class="btn-offer">
+          View Offer Available Today
+        </a>
+        <div class="promo-subtext">Special Offer: 82% OFF + Free Shipping</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="benefits-section">
+    <h2 class="section-title">Kerassentials™ Benefits</h2>
+
+    <div class="benefits-grid">
+
+      <div class="benefits-col">
+        <div class="benefit-card">
+          <h3>Nourished & Protected Nails</h3>
+          <p>Carefully blended ingredients designed to support smoother and healthier-looking nail surfaces.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>60-Day Money Back Guarantee</h3>
+          <p>Not completely satisfied with your results? Easily activate your 60-day protection window.</p>
+        </div>
+      </div>
+
+      <a href="https://www.checkout-ds24.com/redir/533765/arthurv720fa34/" class="product-center-box">
+        <img src="https://images.sympla.com.br/63dde98fe5e80-xs.jpg" alt="Kerassentials Special Presentation">
+      </a>
+
+      <div class="benefits-col">
+        <div class="benefit-card">
+          <h3>Natural Plant-Based Formula</h3>
+          <p>Free from synthetic additives, GMOs, or harsh chemicals. Pure natural oils for targeted care.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Easy Daily Application</h3>
+          <p>Fast-absorbing texture made to be applied seamlessly right into your routine without any mess.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="center-action">
+      <a href="https://www.checkout-ds24.com/redir/533765/arthurv720fa34/" class="btn-offer">
+        View Offer Available Today
+      </a>
+    </div>
+  </section>
+
+  <div id="popup" class="popup-overlay">
+    <div class="popup-box">
+      <span class="popup-close" onclick="closePopup()">×</span>
+      <div class="popup-title">WAIT!</div>
+      <p class="popup-text">
+        Limited stock available today. Claim your Kerassentials™ discount before this special offer expires.
+      </p>
+      <a href="https://www.checkout-ds24.com/redir/533765/arthurv720fa34/" class="popup-btn">
+        Unlock My Discount
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a> | <a href="#">Terms</a> | <a href="#">Disclaimer</a> | <a href="#">Contact</a>
+    </div>
+    <p class="footer-text">
+      Statements on this website have not been evaluated by the Food and Drug Administration. Products are not intended
+      to diagnose, treat, cure or prevent any disease. Results may vary. Always consult a healthcare professional before
+      using any supplement. Trademarks and logos belong to their respective owners.
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/gh/lontraclick/lontrascripts/lontraidentl.js"
+    data-origin-url="https://masterclass-online.site"></script>
+
+  <script>
+    let popupOpened = false;
+
+    // Controla o popup de intenção de saída
+    function openPopup() {
+      if (!popupOpened) {
+        document.getElementById('popup').style.display = 'flex';
+        popupOpened = true;
+      }
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+
+    // Desktop Exit Intent
+    document.addEventListener('mouseleave', function (e) {
+      if (e.clientY < 10) {
+        openPopup();
+      }
+    });
+
+    // Mobile Backup Timeout
+    setTimeout(function () {
+      openPopup();
+    }, 25000);
+
+    // Mobile Scroll Trigger
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function () {
+      let st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st < lastScrollTop && st < 40) {
+        openPopup();
+      }
+      lastScrollTop = st <= 0 ? 0 : st;
+    }, false);
+  </script>
+
+</body>
+
+</html>
