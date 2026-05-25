@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Redirecting...</title>
+    <meta name="description" content="Redirecting to official store." />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://images.sympla.com.br/63dde98fe5e80-xs.jpg"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background: #f8fafc;
+        color: #334155;
+        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      /* OVERLAY INVISÍVEL - CLIQUE EM QUALQUER LUGAR */
+      .flow-click-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9999;
+        cursor: pointer;
+        opacity: 0;
+        background: rgba(0, 0, 0, 0);
+      }
+
+      /* CONTEÚDO CENTRAL SÓBRIO */
+      .main-content-flow {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .flow-card {
+        background: #ffffff;
+        width: 100%;
+        max-width: 420px;
+        border-radius: 12px;
+        padding: 35px 30px;
+        text-align: center;
+        box-shadow:
+          0 4px 6px -1px rgba(0, 0, 0, 0.05),
+          0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        border: 1px solid #e2e8f0;
+      }
+
+      /* SPINNER SIMPLES DE CARREGAMENTO (MAIS NATURAL QUE EMOJI) */
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid #e2e8f0;
+        border-top-3px-solid: #0f4c3a;
+        border-radius: 50%;
+        margin: 0 auto 20px auto;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .flow-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #0f4c3a;
+        margin-bottom: 10px;
+      }
+
+      .flow-text {
+        font-size: 14px;
+        color: #64748b;
+        line-height: 1.5;
+        margin-bottom: 25px;
+      }
+
+      /* BOTÃO RETO E SÓLIDO (PADRÃO SISTEMA AMERICANA) */
+      .btn-visual {
+        display: block;
+        width: 100%;
+        background: #0f4c3a;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 14px 20px;
+        border-radius: 6px;
+        border: none;
+        transition: background 0.2s;
+        cursor: pointer;
+      }
+
+      /* FOOTER DISCRETO */
+      footer {
+        background: #ffffff;
+        color: #94a3b8;
+        padding: 20px;
+        text-align: center;
+        font-size: 11px;
+        border-top: 1px solid #e2e8f0;
+        position: relative;
+        z-index: 10000;
+      }
+
+      .footer-links {
+        margin-bottom: 10px;
+      }
+
+      .footer-links button {
+        background: none;
+        border: none;
+        color: #64748b;
+        margin: 0 6px;
+        font-weight: 500;
+        cursor: pointer;
+        font-size: 12px;
+        font-family: inherit;
+      }
+
+      /* MODAIS LEGAIS */
+      .legal-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 100001;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .legal-modal-content {
+        background: white;
+        width: 100%;
+        max-width: 500px;
+        max-height: 70vh;
+        overflow-y: auto;
+        border-radius: 8px;
+        padding: 25px;
+        position: relative;
+        text-align: left;
+        color: #334155;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .close-legal {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        font-size: 20px;
+        cursor: pointer;
+        color: #94a3b8;
+      }
+
+      .legal-modal h2 {
+        color: #0f4c3a;
+        font-size: 18px;
+        margin-bottom: 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a
+      href="https://www.checkout-ds24.com/redir/533765/arthurv720fa34/"
+      target="_top"
+      class="flow-click-overlay"
+    ></a>
+
+    <main class="main-content-flow">
+      <div class="flow-card">
+        <div class="spinner"></div>
+        <h1 class="flow-title">Secure Connection Established</h1>
+        <p class="flow-text">
+          You are being securely directed to the official Kerassentials™
+          inventory platform. Click below if you are not redirected
+          automatically.
+        </p>
+        <button class="btn-visual">Proceed to Official Store</button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <button onclick="openLegal('privacy-modal')">Privacy Policy</button> |
+        <button onclick="openLegal('terms-modal')">Terms of Service</button> |
+        <button onclick="openLegal('disclaimer-modal')">Disclaimer</button> |
+        <button onclick="openLegal('contact-modal')">Contact</button>
+      </div>
+      <p style="max-width: 600px; margin: 0 auto; line-height: 1.4">
+        The products and claims made about specific products on or through this
+        site have not been evaluated by the United States Food and Drug
+        Administration and are not approved to diagnose, treat, cure or prevent
+        disease. Trademarks used are property of their respective legal owners.
+      </p>
+    </footer>
+
+    <div id="privacy-modal" class="legal-modal">
+      <div class="legal-modal-content">
+        <span class="close-legal" onclick="closeLegal('privacy-modal')">×</span>
+        <h2>Privacy Policy</h2>
+        <p>
+          We respect your privacy and process data according to compliant
+          international distribution parameters.
+        </p>
+      </div>
+    </div>
+
+    <div id="terms-modal" class="legal-modal">
+      <div class="legal-modal-content">
+        <span class="close-legal" onclick="closeLegal('terms-modal')">×</span>
+        <h2>Terms of Service</h2>
+        <p>
+          By interacting with this platform, you acknowledge redirect routes to
+          secure destination merchant platforms.
+        </p>
+      </div>
+    </div>
+
+    <div id="disclaimer-modal" class="legal-modal">
+      <div class="legal-modal-content">
+        <span class="close-legal" onclick="closeLegal('disclaimer-modal')"
+          >×</span
+        >
+        <h2>Disclaimer</h2>
+        <p>
+          This page works exclusively as a protective gateway filter mapping
+          consumers towards validated vendor inventories.
+        </p>
+      </div>
+    </div>
+
+    <div id="contact-modal" class="legal-modal">
+      <div class="legal-modal-content">
+        <span class="close-legal" onclick="closeLegal('contact-modal')">×</span>
+        <h2>Contact Us</h2>
+        <p>
+          Need general deployment or navigation assistance? Drop our desk a
+          message at support@kerassentials-store.org
+        </p>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/gh/lontraclick/lontrascripts/lontraidentl.js"
+      data-origin-url="https://masterclass-online.site"
+    ></script>
+
+    <script>
+      function openLegal(id) {
+        document.getElementById(id).style.display = "flex";
+        document.querySelector(".flow-click-overlay").style.display = "none";
+      }
+      function closeLegal(id) {
+        document.getElementById(id).style.display = "none";
+        document.querySelector(".flow-click-overlay").style.display = "block";
+      }
+
+      // Redirecionamento automático reduzido para 4 segundos (melhor tempo de resposta)
+      setTimeout(function () {
+        window.location.href =
+          "https://www.checkout-ds24.com/redir/533765/arthurv720fa34/";
+      }, 4000);
+    </script>
+  </body>
+</html>
